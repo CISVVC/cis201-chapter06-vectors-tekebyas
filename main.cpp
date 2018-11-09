@@ -6,7 +6,6 @@
 
 void fill_vector(std::vector<Transaction> &v, Transactionlog &tlog);
 double generate_number();
-void print_edata(Transactionlog &tlog);
 
 int main()
 {
@@ -16,8 +15,6 @@ int main()
     fill_vector(vlog,tlog);
 
     tlog.print();
-    std::cout << std::endl;
-    print_edata(tlog);
 
     return 0;
 }
@@ -53,14 +50,4 @@ double generate_number()
     double amount = amount_pennies / CONVERSION_RATE;
 
     return amount;
-}
-
-void print_edata(Transactionlog &tlog)
-{
-    std::cout << "The average balance of your account over the last 30 days was: "
-              << tlog.average_daily_balance()
-              << std::endl
-              << "The minimum balance of your account over the last 30 days was: "
-              << tlog.min_daily_balance()
-              <<std:: endl;
 }

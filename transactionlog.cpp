@@ -39,7 +39,9 @@ void Transactionlog::print()
 
         if(i < 9)
             std::cout << "0";
-
         std::cout << i+1 << " " << change << " " << m_transactions[i].get_description() << std::endl;
     }
+    std::cout << std::endl;
+    std::cout << "The average balance of your account over the last 30 days was: " << average_daily_balance() << std::endl;
+    std::cout << "The minimum balance of your account over the last 30 days was: " << min_daily_balance() << std:: endl;
 }
