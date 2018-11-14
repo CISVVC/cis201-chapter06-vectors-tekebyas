@@ -7,6 +7,11 @@
 class Transactionlog
 {
 public:
+
+    // default constructor omitted because the only data used also has a default constructor
+    // a default constructor would do nothing that isn't already done
+
+
     /*
         Add a Transaction to the Transactionlog
         @param t = an object of type Transaction to be added to the member vector of Transactions creating this log
@@ -37,9 +42,6 @@ public:
     void print();
 private:
     std::vector<Transaction> m_transactions;
-    double m_balance;
-    double m_min_balance;
-    double m_average_balance;
 };
 
 #endif

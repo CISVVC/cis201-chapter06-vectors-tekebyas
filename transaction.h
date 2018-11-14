@@ -7,6 +7,10 @@
 class Transaction
 {
 public:
+    /*
+        Each of these constructors allows for the creation of a Transaction with
+        varying amounts of data given at creation
+    */
     Transaction();
     Transaction(double balance);
     Transaction(double balance, std::string description);

@@ -1,6 +1,6 @@
 #include "transactionlog.h"
 #include <iostream>
-#include <math.h> // fabs() needed for withdrawal to display properly
+#include <math.h> // fabs() needed for withdrawals to display properly (non-negative)
 
 void Transactionlog::add_transaction(const Transaction &t)
 {
@@ -42,6 +42,7 @@ void Transactionlog::print()
     int FIRST_DAY = 0;
     std::cout << "01" << " " << m_transactions[FIRST_DAY].get_balance() << " " << m_transactions[FIRST_DAY].get_description() << std::endl;
 
+    // starts at 1 instead of 0 because the first day is a special case and was handled above ^^
     for(int i=1; i < m_transactions.size(); i++)
     {
         double change = 0.0;
@@ -53,8 +54,11 @@ void Transactionlog::print()
         std::cout << i+1 << " " << m_transactions[i].get_balance() << " " << m_transactions[i].get_description() << fabs(change) << std::endl;
     }
     std::cout << std::endl;
-    std::cout << "The average balance of your account over the last 30 days was: " << average_daily_balance() << std::endl;
-    std::cout << "The minimum balance of your account over the last 30 days was: " << min_daily_balance() << std::endl;
-    std::cout << "The interest gained on your account is: " << get_interest() << std::endl;
+    std::cout << "Average balance: " << average_daily_balance() << std::endl;
+    std::cout << "Minimum balance: " << min_daily_balance() << std::endl;
+    std::cout << "Interest gained: " << get_interest() << std::endl;
+
+    // Because get_interest() only returns the amount changed, this system was needed to get the final value
+    // m_transactions.size()-1 is used to get the final day of the vector without using a magic number
     std::cout << "New balance: " << m_transactions[m_transactions.size()-1].get_balance() + get_interest() << std::endl;
 }
