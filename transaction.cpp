@@ -21,9 +21,9 @@ void Transaction::make_transaction(Transaction t, double amount)
 {
     m_balance = t.get_balance() + amount;
     if(amount > 0)
-        m_description = "Deposit";
+        m_description = "Deposit of ";
     if(amount < 0)
-        m_description = "Withdrawal";
+        m_description = "Withdrawal of ";
 }
 
 double Transaction::get_balance()
