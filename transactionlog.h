@@ -1,3 +1,10 @@
+/*
+    Name: Teke Byas
+    File: transactionlog.h
+    Date of Creation: Thursday, November 8, 2018
+    Description: This file outlines a transaction log that will hold a vector
+        of transactions and track statistics on them as well as print them
+*/
 #ifndef TRANSACTIONLOG_H
 #define TRANSACTIONLOG_H
 

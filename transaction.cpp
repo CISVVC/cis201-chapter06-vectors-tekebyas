@@ -1,3 +1,10 @@
+/*
+    Name: Teke Byas
+    File: transaction.cpp
+    Date of Creation: Thursday, November 8, 2018
+    Description: This file implements a class 'Transaction' that allows the creation
+        of a single transaction to be used in a log
+*/
 #include "transaction.h"
 
 Transaction::Transaction()

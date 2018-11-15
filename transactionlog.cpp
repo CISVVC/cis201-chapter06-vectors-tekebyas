@@ -1,3 +1,10 @@
+/*
+    Name: Teke Byas
+    File: transactionlog.cpp
+    Date of Creation: Thursday, November 8, 2018
+    Description: This file implements a transaction log that will hold a vector
+        of transactions and track statistics on them as well as print them
+*/
 #include "transactionlog.h"
 #include <iostream>
 #include <math.h> // fabs() needed for withdrawals to display properly (non-negative)

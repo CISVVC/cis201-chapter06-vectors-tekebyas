@@ -1,3 +1,9 @@
+/*
+    Name: Teke Byas
+    File: main.cpp
+    Date of Creation: Thursday, November 8, 2018
+    Description: This file will create and output a transaction log from a bank
+*/
 #include <iostream>
 #include <vector>
 #include <cstdlib>
